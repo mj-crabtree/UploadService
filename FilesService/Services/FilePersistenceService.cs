@@ -1,6 +1,6 @@
 namespace UploadService.Services;
 
-class FilePersistenceService : IFilePersistenceService
+internal class FilePersistenceService : IFilePersistenceService
 {
     private const string TargetDirectory = "/app/data/files";
 
@@ -11,12 +11,12 @@ class FilePersistenceService : IFilePersistenceService
         await SaveToFileSystemAsync(file, targetFilePath);
         return targetFilePath;
     }
-    
+
     private static string CreateSafeFileName(IFormFile file)
     {
         return $"{Guid.NewGuid()}{Path.GetExtension(file.Name)}";
     }
-    
+
     private static async Task SaveToFileSystemAsync(IFormFile file, string targetFilePath)
     {
         using (var stream = new FileStream(targetFilePath, FileMode.Create))

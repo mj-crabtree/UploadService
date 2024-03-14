@@ -10,8 +10,8 @@ namespace UploadService.Controllers;
 [Route("api/files")]
 public class FileUploadController : ControllerBase
 {
-    private readonly ILogger<FileUploadController> _logger;
     private readonly IFileHandler _fileHandler;
+    private readonly ILogger<FileUploadController> _logger;
     private readonly IMapper _mapper;
 
     public FileUploadController(ILogger<FileUploadController> logger, IFileHandler fileHandler, IMapper mapper)
@@ -31,13 +31,15 @@ public class FileUploadController : ControllerBase
 
         return Ok();
     }
-    
+
     [HttpPost]
     public async Task<ActionResult<FileDto>> UploadFile(FileUploadCreationDto fileUploadCreationDto)
     {
         var fileEntity = _mapper.Map<FileEntity>(fileUploadCreationDto);
         await _fileHandler.HandleFile(fileEntity);
-        return CreatedAtRoute("GetFile", new { id = fileEntity.Id },
+        return CreatedAtRoute(
+            "GetFile",
+            new { id = fileEntity.Id },
             _mapper.Map<FileDto>(fileEntity));
     }
 }
