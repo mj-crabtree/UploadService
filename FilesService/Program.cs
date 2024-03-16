@@ -19,12 +19,21 @@ builder.Host.UseSerilog();
 
 #region CustomMiddleware
 
-builder.Services.Configure<FileStoreSettings>(builder.Configuration.GetSection("FileStore"));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<FileDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddScoped<IMarkingStrategy, MockMarkingClient>();
+}
+else
+{
+    builder.Services.AddScoped<IMarkingStrategy, MarkingClient>();
+}
+
+builder.Services.Configure<FileStoreSettings>(builder.Configuration.GetSection("FileStore"));
 builder.Services.AddScoped<IFilePersistenceService, FilePersistenceService>();
-builder.Services.AddScoped<IMarkingServiceHttpClient, MarkingServiceHttpClient>();
 builder.Services.AddScoped<IFileHandler, FileHandler>();
 builder.Services.AddScoped<IFileRepository, FileRepository>();
 
