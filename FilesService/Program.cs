@@ -1,5 +1,6 @@
 using FilesService.Services;
 using FilesService.Services.HttpClients;
+using FilesService.Services.Repositories;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -21,6 +22,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IFilePersistenceService, FilePersistenceService>();
 builder.Services.AddScoped<IMarkingServiceHttpClient, MarkingServiceHttpClient>();
 builder.Services.AddScoped<IFileHandler, FileHandler>();
+builder.Services.AddScoped<IFileRepository, FileRepository>();
 
 #endregion
 

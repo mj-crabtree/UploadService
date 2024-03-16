@@ -8,13 +8,13 @@ namespace FilesService.Controllers;
 
 [ApiController]
 [Route("api/files")]
-public class FileUploadController : ControllerBase
+public class FilesController : ControllerBase
 {
     private readonly IFileHandler _fileHandler;
-    private readonly ILogger<FileUploadController> _logger;
+    private readonly ILogger<FilesController> _logger;
     private readonly IMapper _mapper;
 
-    public FileUploadController(ILogger<FileUploadController> logger, IFileHandler fileHandler, IMapper mapper)
+    public FilesController(ILogger<FilesController> logger, IFileHandler fileHandler, IMapper mapper)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _fileHandler = fileHandler ?? throw new ArgumentNullException(nameof(fileHandler));
