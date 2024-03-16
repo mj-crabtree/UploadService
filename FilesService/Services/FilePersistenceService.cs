@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Options;
 
 namespace FilesService.Services;
@@ -13,6 +14,7 @@ internal class FilePersistenceService : IFilePersistenceService
 
     public async Task<string> SaveFile(IFormFile file)
     {
+        EnsureUploadFileSystemExists();
         var safeFileName = CreateSafeFileName(file);
         var targetFilePath = Path.Combine(_rootPath, safeFileName);
         await SaveToFileSystemAsync(file, targetFilePath);
@@ -29,6 +31,14 @@ internal class FilePersistenceService : IFilePersistenceService
         using (var stream = new FileStream(targetFilePath, FileMode.Create))
         {
             await file.CopyToAsync(stream);
+        }
+    }
+
+    private void EnsureUploadFileSystemExists()
+    {
+        if (!Directory.Exists(_rootPath))
+        {
+            Directory.CreateDirectory(_rootPath);
         }
     }
 }

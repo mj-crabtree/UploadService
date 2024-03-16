@@ -28,8 +28,10 @@ public class FileHandler : IFileHandler
             throw new InvalidDataException(nameof(fileEntity));
         }
 
-        await _filePersistenceService.SaveFile(fileEntity.File);
-        _markingClient.MarkFile(fileEntity.File, fileEntity.ClassificationTier);
+        var uploadPath = await _filePersistenceService.SaveFile(fileEntity.File);
+        fileEntity.Path = uploadPath;
+        
+        // _markingClient.MarkFile(fileEntity.File, fileEntity.ClassificationTier);
     }
 
     private bool VerifyFile(FileEntity file)
