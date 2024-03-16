@@ -1,6 +1,8 @@
+using FilesService.Contexts;
 using FilesService.Services;
 using FilesService.Services.HttpClients;
 using FilesService.Services.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -19,6 +21,8 @@ builder.Host.UseSerilog();
 
 builder.Services.Configure<FileStoreSettings>(builder.Configuration.GetSection("FileStore"));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddDbContext<FileDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 builder.Services.AddScoped<IFilePersistenceService, FilePersistenceService>();
 builder.Services.AddScoped<IMarkingServiceHttpClient, MarkingServiceHttpClient>();
 builder.Services.AddScoped<IFileHandler, FileHandler>();

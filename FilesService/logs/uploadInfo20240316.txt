@@ -246,3 +246,222 @@ System.IO.DirectoryNotFoundException: Could not find a part of the path '/app/da
 2024-03-16 19:40:28.259 +00:00 [DBG] Connection id "0HN25U3H81JMB" completed keep alive response.
 2024-03-16 19:40:28.276 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/files - 500 null text/plain; charset=utf-8 20787.631ms
 2024-03-16 19:42:20.686 +00:00 [DBG] Config reload token fired. Checking for changes...
+2024-03-16 20:04:24.657 +00:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-16 20:07:24.428 +00:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-16 20:07:51.570 +00:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-16 20:08:33.663 +00:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-16 20:08:33.876 +00:00 [DBG] Entity Framework Core 8.0.3 initialized 'FileDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.3' with options: None
+2024-03-16 20:08:34.092 +00:00 [DBG] 'FileDbContext' disposed.
+2024-03-16 20:08:48.423 +00:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-16 20:08:48.626 +00:00 [DBG] Entity Framework Core 8.0.3 initialized 'FileDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.3' with options: None
+2024-03-16 20:08:48.635 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:08:48.639 +00:00 [DBG] Created DbConnection. (2ms).
+2024-03-16 20:08:48.641 +00:00 [DBG] Migrating using database 'main' on server ''.
+2024-03-16 20:08:48.643 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:08:48.645 +00:00 [DBG] Created DbConnection. (1ms).
+2024-03-16 20:08:48.646 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.651 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.653 +00:00 [DBG] Disposing connection to database 'main' on server ''.
+2024-03-16 20:08:48.655 +00:00 [DBG] Disposed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.659 +00:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-03-16 20:08:48.661 +00:00 [DBG] Created DbCommand for 'ExecuteScalar' (2ms).
+2024-03-16 20:08:48.662 +00:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (4ms).
+2024-03-16 20:08:48.662 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.662 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.665 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-03-16 20:08:48.674 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-03-16 20:08:48.675 +00:00 [DBG] Closing connection to database 'main' on server ''.
+2024-03-16 20:08:48.675 +00:00 [DBG] Closed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.676 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:08:48.676 +00:00 [DBG] Created DbConnection. (0ms).
+2024-03-16 20:08:48.676 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.676 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.676 +00:00 [DBG] Disposing connection to database 'main' on server ''.
+2024-03-16 20:08:48.676 +00:00 [DBG] Disposed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.712 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:08:48.712 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:08:48.712 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:08:48.712 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.712 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.712 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-03-16 20:08:48.714 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-03-16 20:08:48.714 +00:00 [DBG] Closing connection to database 'main' on server ''.
+2024-03-16 20:08:48.714 +00:00 [DBG] Closed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.714 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:08:48.715 +00:00 [DBG] Created DbConnection. (0ms).
+2024-03-16 20:08:48.715 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.715 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.715 +00:00 [DBG] Disposing connection to database 'main' on server ''.
+2024-03-16 20:08:48.715 +00:00 [DBG] Disposed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.715 +00:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-03-16 20:08:48.715 +00:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2024-03-16 20:08:48.715 +00:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2024-03-16 20:08:48.715 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.715 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.715 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-03-16 20:08:48.716 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-03-16 20:08:48.716 +00:00 [DBG] Closing connection to database 'main' on server ''.
+2024-03-16 20:08:48.716 +00:00 [DBG] Closed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.721 +00:00 [INF] Applying migration '20240316200834_InitialMigration'.
+2024-03-16 20:08:48.727 +00:00 [DBG] Opening connection to database 'main' on server ''.
+2024-03-16 20:08:48.728 +00:00 [DBG] Opened connection to database 'main' on server ''.
+2024-03-16 20:08:48.729 +00:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-03-16 20:08:48.731 +00:00 [DBG] Began transaction with isolation level 'Serializable'.
+2024-03-16 20:08:48.731 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:08:48.731 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:08:48.732 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:08:48.732 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Files" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Files" PRIMARY KEY,
+    "ClassificationTier" INTEGER NOT NULL,
+    "Path" TEXT NOT NULL
+);
+2024-03-16 20:08:48.732 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Files" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Files" PRIMARY KEY,
+    "ClassificationTier" INTEGER NOT NULL,
+    "Path" TEXT NOT NULL
+);
+2024-03-16 20:08:48.732 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:08:48.732 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:08:48.733 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:08:48.733 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240316200834_InitialMigration', '8.0.3');
+2024-03-16 20:08:48.734 +00:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240316200834_InitialMigration', '8.0.3');
+2024-03-16 20:08:48.735 +00:00 [DBG] Disposing transaction.
+2024-03-16 20:08:48.735 +00:00 [DBG] Closing connection to database 'main' on server ''.
+2024-03-16 20:08:48.735 +00:00 [DBG] Closed connection to database 'main' on server '' (0ms).
+2024-03-16 20:08:48.736 +00:00 [DBG] 'FileDbContext' disposed.
+2024-03-16 20:08:48.737 +00:00 [DBG] Disposing connection to database 'main' on server ''.
+2024-03-16 20:08:48.737 +00:00 [DBG] Disposed connection to database 'main' on server '' (0ms).
+2024-03-16 20:09:35.771 +00:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-16 20:09:35.968 +00:00 [DBG] Entity Framework Core 8.0.3 initialized 'FileDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.3' with options: None
+2024-03-16 20:09:35.975 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:09:35.979 +00:00 [DBG] Created DbConnection. (2ms).
+2024-03-16 20:09:35.980 +00:00 [DBG] Migrating using database 'main' on server 'files.db'.
+2024-03-16 20:09:35.982 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:09:35.983 +00:00 [DBG] Created DbConnection. (1ms).
+2024-03-16 20:09:35.983 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.987 +00:00 [DBG] An error occurred using the connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.988 +00:00 [DBG] Disposing connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.992 +00:00 [DBG] Disposed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:35.992 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:09:35.992 +00:00 [DBG] Created DbConnection. (0ms).
+2024-03-16 20:09:35.992 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.993 +00:00 [DBG] An error occurred using the connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.993 +00:00 [DBG] Disposing connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.993 +00:00 [DBG] Disposed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:35.993 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:35.996 +00:00 [DBG] Opened connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:35.999 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:09:36.002 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (2ms).
+2024-03-16 20:09:36.002 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (4ms).
+2024-03-16 20:09:36.005 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-16 20:09:36.024 +00:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-16 20:09:36.026 +00:00 [DBG] Closing connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.027 +00:00 [DBG] Closed connection to database 'main' on server 'files.db' (1ms).
+2024-03-16 20:09:36.063 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:09:36.063 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:09:36.063 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:09:36.063 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.064 +00:00 [DBG] Opened connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.064 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-03-16 20:09:36.066 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-03-16 20:09:36.066 +00:00 [DBG] Closing connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.066 +00:00 [DBG] Closed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:36.067 +00:00 [DBG] Creating DbConnection.
+2024-03-16 20:09:36.067 +00:00 [DBG] Created DbConnection. (0ms).
+2024-03-16 20:09:36.068 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.068 +00:00 [DBG] Opened connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.069 +00:00 [DBG] Disposing connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.069 +00:00 [DBG] Disposed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:36.070 +00:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-03-16 20:09:36.070 +00:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2024-03-16 20:09:36.070 +00:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2024-03-16 20:09:36.071 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.071 +00:00 [DBG] Opened connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.071 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-03-16 20:09:36.072 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-03-16 20:09:36.073 +00:00 [DBG] Closing connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.073 +00:00 [DBG] Closed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:36.073 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.074 +00:00 [DBG] Opened connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.074 +00:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-03-16 20:09:36.074 +00:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-16 20:09:36.074 +00:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-03-16 20:09:36.074 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-03-16 20:09:36.075 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-03-16 20:09:36.075 +00:00 [DBG] Closing data reader to 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.076 +00:00 [DBG] A data reader for 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db' is being disposed after spending 0ms reading results.
+2024-03-16 20:09:36.076 +00:00 [DBG] Closing connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.076 +00:00 [DBG] Closed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:36.081 +00:00 [INF] Applying migration '20240316200834_InitialMigration'.
+2024-03-16 20:09:36.088 +00:00 [DBG] Opening connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.089 +00:00 [DBG] Opened connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.091 +00:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-03-16 20:09:36.092 +00:00 [DBG] Began transaction with isolation level 'Serializable'.
+2024-03-16 20:09:36.093 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:09:36.093 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:09:36.093 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:09:36.093 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Files" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Files" PRIMARY KEY,
+    "ClassificationTier" INTEGER NOT NULL,
+    "Path" TEXT NOT NULL
+);
+2024-03-16 20:09:36.093 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Files" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Files" PRIMARY KEY,
+    "ClassificationTier" INTEGER NOT NULL,
+    "Path" TEXT NOT NULL
+);
+2024-03-16 20:09:36.094 +00:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-03-16 20:09:36.094 +00:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:09:36.094 +00:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-03-16 20:09:36.094 +00:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240316200834_InitialMigration', '8.0.3');
+2024-03-16 20:09:36.094 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240316200834_InitialMigration', '8.0.3');
+2024-03-16 20:09:36.095 +00:00 [DBG] Committing transaction.
+2024-03-16 20:09:36.096 +00:00 [DBG] Committed transaction.
+2024-03-16 20:09:36.097 +00:00 [DBG] Disposing transaction.
+2024-03-16 20:09:36.097 +00:00 [DBG] Closing connection to database 'main' on server '/home/mc/code/projects/BlackLake.dev/UploadService/FilesService/files.db'.
+2024-03-16 20:09:36.097 +00:00 [DBG] Closed connection to database 'main' on server 'files.db' (0ms).
+2024-03-16 20:09:36.098 +00:00 [DBG] 'FileDbContext' disposed.
+2024-03-16 20:09:36.098 +00:00 [DBG] Disposing connection to database 'main' on server 'files.db'.
+2024-03-16 20:09:36.098 +00:00 [DBG] Disposed connection to database 'main' on server 'files.db' (0ms).
