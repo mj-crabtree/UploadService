@@ -1,5 +1,6 @@
+using FilesService.Services;
+using FilesService.Services.HttpClients;
 using Serilog;
-using UploadService.Services;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -15,8 +16,11 @@ builder.Host.UseSerilog();
 
 #region CustomMiddleware
 
+builder.Services.Configure<FileStoreSettings>(builder.Configuration.GetSection("FileStore"));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IFilePersistenceService, FilePersistenceService>();
 builder.Services.AddScoped<IMarkingServiceHttpClient, MarkingServiceHttpClient>();
+builder.Services.AddScoped<IFileHandler, FileHandler>();
 
 #endregion
 

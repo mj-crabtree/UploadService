@@ -1,10 +1,10 @@
 using AutoMapper;
+using FilesService.Entities;
+using FilesService.Models;
+using FilesService.Services;
 using Microsoft.AspNetCore.Mvc;
-using UploadService.Entities;
-using UploadService.Models;
-using UploadService.Services;
 
-namespace UploadService.Controllers;
+namespace FilesService.Controllers;
 
 [ApiController]
 [Route("api/files")]

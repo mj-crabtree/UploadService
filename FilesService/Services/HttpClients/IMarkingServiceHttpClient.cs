@@ -1,6 +1,6 @@
-using UploadService.Models;
+using FilesService.Models;
 
-namespace UploadService.Services;
+namespace FilesService.Services.HttpClients;
 
 public interface IMarkingServiceHttpClient
 {

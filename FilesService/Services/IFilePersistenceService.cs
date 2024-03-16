@@ -1,4 +1,4 @@
-namespace UploadService.Services;
+namespace FilesService.Services;
 
 public interface IFilePersistenceService
 {
