@@ -23,22 +23,50 @@ public class FileHandler : IFileHandler
 
     public async Task HandleFile(FileEntity fileEntity)
     {
-        if (!VerifyFile(fileEntity))
+        try
+        {
+            VerifyFile(fileEntity);
+            SetFileProperties(fileEntity);
+            await PersistUnmarkedFile(fileEntity);
+            await AddTorepository(fileEntity);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, "An error occurred when handling the file");
+            throw;
+        }
+    }
+
+    private void VerifyFile(FileEntity fileEntity)
+    {
+        if (!Validate(fileEntity))
         {
             _logger.LogError($"File verification failed: {nameof(fileEntity)}");
             throw new InvalidDataException(nameof(fileEntity));
         }
+    }
 
-        fileEntity.UploadPath = await _persistenceService.SaveFile(fileEntity.File);
-        fileEntity.Path = await _markingClient.MarkFile(
-                fileEntity.UploadPath, 
-                fileEntity.ClassificationTier.ToString());
-        
+    private async Task AddTorepository(FileEntity fileEntity)
+    {
         _fileRepository.Add(fileEntity);
         await _fileRepository.SaveChanges();
     }
 
-    private bool VerifyFile(FileEntity file)
+    private void SetFileProperties(FileEntity fileEntity)
+    {
+        fileEntity.FileType = Path.GetExtension(fileEntity.File.FileName);
+        fileEntity.UserDefinedFileName = Path.GetFileName(fileEntity.File.FileName);
+    }
+
+    private async Task PersistUnmarkedFile(FileEntity fileEntity)
+    {
+        fileEntity.UploadPath = await _persistenceService.SaveFile(fileEntity.File);
+        fileEntity.Path = await _markingClient.MarkFile(
+            fileEntity.UploadPath, 
+            fileEntity.ClassificationTier.ToString());
+    }
+
+    private bool Validate(FileEntity file)
     {
         return true;
     }

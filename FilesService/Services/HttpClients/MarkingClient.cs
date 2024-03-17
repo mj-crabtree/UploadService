@@ -1,5 +1,3 @@
-using FilesService.Models;
-
 namespace FilesService.Services.HttpClients;
 
 public class MarkingClient : IMarkingStrategy

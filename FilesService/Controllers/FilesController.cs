@@ -23,16 +23,15 @@ public class FilesController : ControllerBase
         _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
     }
-
-    [HttpGet(Name = "GetFile")]
-    [Route("{fileId}")]
+    
+    [HttpGet]
+    [Route("{fileId}", Name = "GetFile")]
     public async Task<ActionResult<FileDto>> GetFile(Guid fileId)
     {
         if (fileId == Guid.Empty)
         {
             return NotFound();
         }
-
         var fileEntity = await _repository.GetFile(fileId);
         return Ok(_mapper.Map<FileDto>(fileEntity));
     }
@@ -44,7 +43,7 @@ public class FilesController : ControllerBase
         await _fileHandler.HandleFile(fileEntity);
         return CreatedAtRoute(
             "GetFile",
-            new { id = fileEntity.Id },
+            new { fileId = fileEntity.Id },
             _mapper.Map<FileDto>(fileEntity));
     }
 }
