@@ -19,6 +19,7 @@ builder.Host.UseSerilog();
 
 #region CustomMiddleware
 
+builder.Services.AddHttpClient();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<FileDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
